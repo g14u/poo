@@ -4,17 +4,17 @@ using namespace std;
 
 class Adresa {
 private:
+	const int adresa;
 	char* nume;
-	int adresa;
 public:
 	setNume(char* nume) {
 		this->nume = nume;
 	}
-	setAdresa(int a) {
-		if (a > 0) {
-			this->adresa = a;
-		}
-	}
+//	setAdresa(int a) {
+//		if (a > 0) {
+//			this->adresa = a;
+//		}
+//	}
 };
 
 class Tranzactie {
