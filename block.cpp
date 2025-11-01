@@ -2,17 +2,32 @@
 
 using namespace std;
 
+class Adresa {
+private:
+	char* nume;
+	int adresa;
+public:
+	setNume(char* nume) {
+		this->nume = nume;
+	}
+	setAdresa(int a) {
+		if (a > 0) {
+			this->adresa = a;
+		}
+	}
+};
+
 class Tranzactie {
 private:
-	char* expeditor;
-	char* destinatar;
+	Adresa expeditor;
+	Adresa destinatar;
 	float suma;
 public:
-	void setDestinatar(char* address) {
-
+	void setDestinatar(Adresa dest) {
+		this->destinatar = dest;
 	}
-	void setExpeditor(char* address) {
-
+	void setExpeditor(Adresa exp) {
+		this->expeditor = exp;
 	}
 	void setSuma(float suma) {
 		if (suma > 0) {
@@ -22,5 +37,8 @@ public:
 };
 
 void main() {
-	Tranzactie t;
+	Adresa ion;
+	Adresa vasile;
+
+	Tranzactie ion_vasile;
 }
