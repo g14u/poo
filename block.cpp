@@ -7,6 +7,7 @@ private:
 	const int adresa;
 	char* nume;
 	float valoare;
+
 public:
 	void setNume(const char* nume) {
 		if (strlen(nume) > 0) {
