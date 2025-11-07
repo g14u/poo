@@ -63,7 +63,7 @@ void stergereMaxDePePozitie(int** vector, int* dim, int pozitie) { //prima *:pas
 
 
 }
-void main() {
+void main1() {
 
 	Carte carte;
 	carte.nrPagini = 250;

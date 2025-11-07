@@ -4,7 +4,7 @@ using namespace std;
 
 class Adresa {
 private:
-	const int adresa;
+	int adresa;
 	char* nume;
 	float valoare;
 
@@ -19,11 +19,6 @@ public:
 	char* getNume() {
 		return this->nume;
 	}
-//	setAdresa(int a) {
-//		if (a > 0) {
-//			this->adresa = a;
-//		}
-//	}
 };
 
 class Tranzactie {
@@ -52,6 +47,6 @@ void main() {
 
 	ion.setNume("Ion");
 	vasile.setNume("Vasile");
-	cout << ion.getNume << endl;
-	cout << vasile.getNume << endl;
+	cout << ion.getNume() << endl;
+	cout << vasile.getNume() << endl;
 }
