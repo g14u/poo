@@ -5,10 +5,15 @@ using namespace std;
 class Adresa {
 private:
 	int adresa;
-	char* nume;
+	string nume;
 	float valoare;
 
 public:
+	Adresa() {
+		this->adresa = 0;
+		this->valoare = 0;
+		this->nume = "";
+	}
 	void setNume(const char* nume) {
 		if (strlen(nume) > 0) {
 			this->nume = new char[strlen(nume) + 1];
