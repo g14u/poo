@@ -21,14 +21,13 @@ public:
 		this->nume = nume;
 	}
 
-	void setNume(const char* nume) {
-		if (strlen(nume) > 0) {
-			this->nume = new char[strlen(nume) + 1];
-			strcpy_s(this->nume, strlen(nume) + 1, nume);
+	void setNume(string nume) {
+		if (nume.length() > 0) {
+			this->nume = nume;
 		}
 	}
 
-	char* getNume() {
+	string getNume() {
 		return this->nume;
 	}
 };
@@ -53,11 +52,10 @@ public:
 };
 
 void main() {
-	Adresa ion;
+	Adresa ion(1, 1000, "Ion");
 	Adresa vasile;
 	Tranzactie ion_vasile;
 
-	ion.setNume("Ion");
 	vasile.setNume("Vasile");
 	cout << ion.getNume() << endl;
 	cout << vasile.getNume() << endl;
