@@ -14,6 +14,13 @@ public:
 		this->valoare = 0;
 		this->nume = "";
 	}
+
+	Adresa(int adresa, float valoare, string nume) {
+		this->adresa = adresa;
+		this->valoare = valoare;
+		this->nume = nume;
+	}
+
 	void setNume(const char* nume) {
 		if (strlen(nume) > 0) {
 			this->nume = new char[strlen(nume) + 1];
