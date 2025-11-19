@@ -4,21 +4,24 @@ using namespace std;
 
 class Adresa {
 private:
-	int adresa;
+	const int adresa;
 	string nume;
 	float valoare;
 
 public:
-	Adresa() {
-		this->adresa = 0;
+	Adresa() :adresa(genereazaAdresa()) {
 		this->valoare = 0;
 		this->nume = "";
 	}
 
-	Adresa(int adresa, float valoare, string nume) {
-		this->adresa = adresa;
+	Adresa(int adresa, float valoare, string nume) :adresa(genereazaAdresa()) {
 		this->valoare = valoare;
 		this->nume = nume;
+	}
+
+	static int genereazaAdresa() {
+		static int contor = 0;
+		return ++contor;
 	}
 
 	void setNume(string nume) {
@@ -29,6 +32,14 @@ public:
 
 	string getNume() {
 		return this->nume;
+	}
+
+	void setValoare(float valoare) {
+		this->valoare = valoare;
+	}
+
+	float getValoare() {
+		return this->valoare;
 	}
 };
 
