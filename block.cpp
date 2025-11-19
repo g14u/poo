@@ -51,13 +51,13 @@ private:
 
 public:
 	Tranzactie() {
-		this->expeditor = nullptr;
-		this->destinatar = nullptr;
+		//this->expeditor = nullptr;
+		//this->destinatar = nullptr;
 		this->suma = 0;
 	}
 
 	void setDestinatar(const Adresa dest) {
-		this->destinatar = dest;
+		//this->destinatar = dest;
 	}
 
 	Adresa getDestinatar() {
@@ -65,7 +65,7 @@ public:
 	}
 
 	void setExpeditor(const Adresa exp) {
-		this->expeditor = exp;
+		//this->expeditor = exp;
 	}
 
 	Adresa getExpeditor() {
