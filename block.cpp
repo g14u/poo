@@ -47,7 +47,18 @@ public:
 	}
 
 	void operator=(const Adresa& copie) {
+		this->nume = copie.nume;
+		this->valoare = copie.valoare;
+	}
 
+	void operator+=(int valoare) {
+		this->valoare += valoare;
+	}
+
+	void afisareAdresa() {
+		cout << endl << "Adresa: " << this->adresa << endl
+			<< "Nume: " << this->nume << endl
+			<< "Suma: " << this->valoare << endl;
 	}
 };
 
@@ -64,7 +75,7 @@ public:
 		this->suma = 0;
 	}
 
-	void setDestinatar(const int dest) {
+	void setDestinatar(int dest) {
 		this->destinatar = dest;
 	}
 
@@ -72,7 +83,7 @@ public:
 		return this->destinatar;
 	}
 
-	void setExpeditor(const int exp) {
+	void setExpeditor(int exp) {
 		this->expeditor = exp;
 	}
 
@@ -98,6 +109,10 @@ void main() {
 	Tranzactie ion_vasile;
 
 	vasile.setNume("Vasile");
-	cout << ion.getNume() << endl;
-	cout << vasile.getNume() << endl;
+	//cout << ion.getNume() << endl;
+	//cout << vasile.getNume() << endl;
+	vasile.afisareAdresa();
+	ion.afisareAdresa();
+	vasile += 100;
+	vasile.afisareAdresa();
 }
