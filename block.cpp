@@ -41,34 +41,42 @@ public:
 	float getValoare() {
 		return this->valoare;
 	}
+
+	int getAdresa() {
+		return this->adresa;
+	}
+
+	void operator=(const Adresa& copie) {
+
+	}
 };
 
 class Tranzactie {
 private:
-	Adresa expeditor;
-	Adresa destinatar;
+	int expeditor;
+	int destinatar;
 	float suma;
 
 public:
 	Tranzactie() {
-		//this->expeditor = nullptr;
-		//this->destinatar = nullptr;
+		this->expeditor = 0;
+		this->destinatar = 0;
 		this->suma = 0;
 	}
 
-	void setDestinatar(const Adresa dest) {
-		//this->destinatar = dest;
+	void setDestinatar(const int dest) {
+		this->destinatar = dest;
 	}
 
-	Adresa getDestinatar() {
+	int getDestinatar() {
 		return this->destinatar;
 	}
 
-	void setExpeditor(const Adresa exp) {
-		//this->expeditor = exp;
+	void setExpeditor(const int exp) {
+		this->expeditor = exp;
 	}
 
-	Adresa getExpeditor() {
+	int getExpeditor() {
 		return this->expeditor;
 	}
 
