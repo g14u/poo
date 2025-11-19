@@ -37,18 +37,40 @@ private:
 	Adresa expeditor;
 	Adresa destinatar;
 	float suma;
+
 public:
-	void setDestinatar(Adresa dest) {
-		//this->destinatar = dest;
+	Tranzactie() {
+		this->expeditor = nullptr;
+		this->destinatar = nullptr;
+		this->suma = 0;
 	}
-	void setExpeditor(Adresa exp) {
-		//this->expeditor = exp;
+
+	void setDestinatar(const Adresa dest) {
+		this->destinatar = dest;
 	}
+
+	Adresa getDestinatar() {
+		return this->destinatar;
+	}
+
+	void setExpeditor(const Adresa exp) {
+		this->expeditor = exp;
+	}
+
+	Adresa getExpeditor() {
+		return this->expeditor;
+	}
+
 	void setSuma(float suma) {
 		if (suma > 0) {
 			this->suma = suma;
 		}
 	}
+
+	float getSuma() {
+		return this->suma;
+	}
+
 };
 
 void main() {
