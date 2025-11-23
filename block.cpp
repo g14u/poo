@@ -115,4 +115,14 @@ void main() {
 	ion.afisareAdresa();
 	vasile += 100;
 	vasile.afisareAdresa();
+
+	char* p = nullptr;
+	p = new char[strlen("Marius") + 1];
+	strcpy_s(p, strlen("Marius") + 1, "Marius");
+	if (p)
+		cout << p;
+	else
+		cout << "false";
+	delete[] p;
+
 }
